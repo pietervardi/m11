@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Semantic'),
+        title: Text('Appbar-s'.i18n()),
         actions: [
           IconButton(
             icon: const Icon(Icons.language),
@@ -80,12 +80,14 @@ class _HomeState extends State<Home> {
         children: [
           Semantics(
             label: 'Judul Aplikasi',
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Aplikasi Semantics buatan Anak Negeri',
-                style: TextStyle(
-                  fontSize: 20,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Semantics(
+                child: Text(
+                  'Title'.i18n(),
+                  style: const TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
               ),
             ),
@@ -166,6 +168,34 @@ class _HomeState extends State<Home> {
             ),
           ),
           Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Semantics(
+                      onTapHint: 'Ketuk 2 kali untuk masuk ke aplikasi',
+                      child: Text('Button-sign-in'.i18n())
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Semantics(
+                      onTapHint: 'Ketuk 2 kali untuk keluar ke aplikasi',
+                      child: Text('Button-sign-out'.i18n())
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Padding(
             padding: const EdgeInsets.all(18),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -186,7 +216,7 @@ class _HomeState extends State<Home> {
                               });
                             },
                           ),
-                          const Text('Option 1'),
+                          Text('Option-1'.i18n()),
                         ],
                       ),
                     ),
@@ -204,7 +234,7 @@ class _HomeState extends State<Home> {
                                 });
                               },
                             ),
-                          const Text('Option 2'),
+                          Text('Option-2'.i18n()),
                         ],
                       ),
                     ),

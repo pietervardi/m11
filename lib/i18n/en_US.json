@@ -3,5 +3,9 @@
   "Button-sign-out": "Exit",
   "Checkbox-agree": "Agree",
   "Text-call": "Call",
-  "Name": "Name"
+  "Name": "Name",
+  "Title": "Semantics application made by Anak Negeri",
+  "Option-1": "Option 1",
+  "Option-2": "Option 2",
+  "Appbar-s": "Semantic"
 }
